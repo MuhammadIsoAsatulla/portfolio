@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(180deg, #0d1117, #161b22);
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #5500ff;
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: #c9d1d9;
+            margin: 20px 0 10px;
+        }
+        header h2 {
+            font-size: 1.5em;
+            color: #8b949e;
+            margin-bottom: 20px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #c9d1d9;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #5500ff;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #161b22;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        section h2 {
+            color: #5500ff;
+            border-bottom: 2px solid #5500ff;
+            padding-bottom: 5px;
+        }
+        .card {
+            background: #161b22;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #161b22;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card .content {
+            padding: 15px;
+        }
+        .project-card .content h3 {
+            color: #c9d1d9;
+            margin-bottom: 10px;
+        }
+        .project-card .content p {
+            color: #8b949e;
+            margin-bottom: 10px;
+        }
+        .project-card .content .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .project-card .content .tags span {
+            background: #00b7ff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+        footer {
+            background-color: #161b22;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .click-animation {
+            transition: transform 0.2s, color 0.3s;
+        }
+        .click-animation:active {
+            transform: scale(0.95);
+            color: #5500ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./profile.jpg" alt="Profile Picture" class="click-animation">
+        <h1 class="click-animation">Muhammadiso Sobitxonov</h1>
+        <h2 class="click-animation">Middle Full-Stack Developer</h2>
+        <div class="social-icons">
+            <a href="#" target="_blank" class="click-animation">&#xf09a;</a> <!-- GitHub -->
+            <a href="#" target="_blank" class="click-animation">&#xf08d;</a> <!-- Telegram -->
+            <a href="#" target="_blank" class="click-animation">&#xf16d;</a> <!-- Instagram -->
+            <a href="#" target="_blank" class="click-animation">&#xf0e0;</a> <!-- Email -->
+        </div>
+    </header>
+
+    <nav>
+        <a href="#achievements" class="click-animation">Academic Achievements</a>
+        <a href="#projects" class="click-animation">Projects</a>
+        <a href="#skills" class="click-animation">Skills & Certifications</a>
+        <a href="#about" class="click-animation">About Me</a>
+        <a href="#contact" class="click-animation">Contact</a>
+    </nav>
+
+    <section id="achievements">
+        <h2>Academic Achievements</h2>
+        <div class="card click-animation">
+            <p>Details about your academic successes can go here. You can edit this in the source code or upload certificates to be displayed here.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card click-animation">
+                <img src="./project1.jpg" alt="Medical Site">
+                <div class="content">
+                    <h3>Medical Site</h3>
+                    <p>Bu "Meditsina" sohasi bo'yicha yasalgan sayt</p>
+                    <div class="tags">
+                        <span>React</span>
+                        <span>TailwindCSS</span>
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card click-animation">
+                <img src="./project2.jpg" alt="Messaging App">
+                <div class="content">
+                    <h3>Messaging APP</h3>
+                    <p>Bu sodda xabarlar almashish uchun sayt</p>
+                    <div class="tags">
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>TailwindCSS</span>
+                        <span>Lucide</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card click-animation">
+                <img src="./project3.jpg" alt="Food Menu">
+                <div class="content">
+                    <h3>Food Menu</h3>
+                    <p>Bu restoranlar uchun sodda ovqat menyusi</p>
+                    <div class="tags">
+                        <span>React Vite</span>
+                        <span>Node.js</span>
+                        <span>Tailwind</span>
+                        <span>Express.js</span>
+                        <span>MongoDB</span>
+                        <span>Lucide</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills & Certifications</h2>
+        <div class="card click-animation">
+            <p>Include a list of your technical skills and any certifications you have achieved.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card click-animation">
+            <p>Write a personal statement or introduction here, discussing your passion for IT and Physics.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+            <p>Email: your.email@example.com</p>
+            <p>Phone: +123-456-7890</p>
+            <p>Social Media:</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/yourprofile" target="_blank" class="click-animation">Instagram</a>
+                <a href="https://t.me/yourprofile" target="_blank" class="click-animation">Telegram</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="click-animation">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
